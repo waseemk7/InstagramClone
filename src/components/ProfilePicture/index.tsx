@@ -2,13 +2,10 @@ import React from 'react';
 import {Image, View} from 'react-native';
 import styles from './styles';
 
-const ProfilePicture = () => {
+const ProfilePicture = ({uri}) => {
   return (
     <View style={styles.container}>
-      <Image
-        source={{uri: 'https://reactnative.dev/img/tiny_logo.png'}}
-        style={styles.image}
-      />
+      <Image source={{uri: uri}} style={styles.image} />
     </View>
   );
 };
