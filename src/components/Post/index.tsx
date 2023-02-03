@@ -4,11 +4,11 @@ import Body from './components/Body';
 import Footer from './components/Footer';
 import {View} from 'react-native';
 
-const Post = ({post: {user}}) => {
+const Post = ({post}) => {
   return (
     <View>
-      <Header imageUri={user.imageUri} name={user.name} />
-      <Body />
+      <Header imageUri={post.user.imageUri} name={post.user.name} />
+      <Body imageUri={post.imageUri} />
       <Footer />
     </View>
   );

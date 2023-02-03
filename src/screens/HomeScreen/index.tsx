@@ -10,6 +10,7 @@ const post = {
     imageUri: 'https://robohash.org/mail@ashallendesign.co.uk',
     name: 'Sushil',
   },
+  imageUri: 'https://placekitten.com/250/250',
 };
 
 const HomeScreen = () => {
