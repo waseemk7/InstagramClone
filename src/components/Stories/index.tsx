@@ -1,6 +1,7 @@
 import React from 'react';
 import {FlatList} from 'react-native';
 import Story from '../Story';
+import styles from './styles';
 
 const data = [
   {
@@ -45,10 +46,11 @@ const Stories = () => {
       data={data}
       keyExtractor={({name}) => name}
       horizontal
+      showsHorizontalScrollIndicator={false}
+      style={styles.container}
       renderItem={({item}) => (
         <Story imageUri={item.imageUri} name={item.name} />
       )}
-      showsHorizontalScrollIndicator={false}
     />
   );
 };
