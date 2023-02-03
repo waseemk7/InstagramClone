@@ -1,7 +1,10 @@
 import * as React from 'react';
+import {Image} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
+import logo from './src/assets/images/logo.png';
 
 import Feather from 'react-native-vector-icons/Feather';
 import Foundation from 'react-native-vector-icons/Foundation';
@@ -29,8 +32,15 @@ function HomeStackScreen() {
           headerLeft: () => (
             <Feather name="camera" size={25} color={'#000000'} />
           ),
+          headerTitle: () => (
+            <Image source={logo} resizeMode="contain" style={{width: 125, marginTop: -105}} />
+          ),
           headerRight: () => (
-            <IoniconsIcon name="paper-plane-outline" size={25} color={'#000000'} />
+            <IoniconsIcon
+              name="paper-plane-outline"
+              size={25}
+              color={'#000000'}
+            />
           ),
         }}
       />
