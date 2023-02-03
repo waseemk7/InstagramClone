@@ -1,6 +1,8 @@
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
 import Feather from 'react-native-vector-icons/Feather';
 import Foundation from 'react-native-vector-icons/Foundation';
 import AntDesign from 'react-native-vector-icons/AntDesign';
@@ -13,6 +15,28 @@ import NotificationScreen from './src/screens/NotificationScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
 
 const Tab = createBottomTabNavigator();
+
+const HomeStack = createNativeStackNavigator();
+
+function HomeStackScreen() {
+  return (
+    <HomeStack.Navigator>
+      <HomeStack.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{
+          title: 'Instagram',
+          headerLeft: () => (
+            <Feather name="camera" size={25} color={'#000000'} />
+          ),
+          headerRight: () => (
+            <IoniconsIcon name="paper-plane-outline" size={25} color={'#000000'} />
+          ),
+        }}
+      />
+    </HomeStack.Navigator>
+  );
+}
 
 function App(): JSX.Element {
   return (
@@ -43,7 +67,7 @@ function App(): JSX.Element {
           tabBarShowLabel: false,
           headerShown: false,
         })}>
-        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Home" component={HomeStackScreen} />
         <Tab.Screen name="Discovery" component={DiscoveryScreen} />
         <Tab.Screen name="Post" component={CreatePostScreen} />
         <Tab.Screen name="Notifications" component={NotificationScreen} />
