@@ -41,6 +41,7 @@ function App(): JSX.Element {
           tabBarActiveTintColor: '#000000',
           tabBarInactiveTintColor: 'gray',
           tabBarShowLabel: false,
+          headerShown: false,
         })}>
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="Discovery" component={DiscoveryScreen} />
