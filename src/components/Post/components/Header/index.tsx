@@ -1,8 +1,8 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import ProfilePicture from '../../../ProfilePicture';
-import styles from './styles';
 import Icon from 'react-native-vector-icons/Entypo';
+import styles from './styles';
 
 const Header = ({imageUri, name}) => {
   return (
