@@ -8,9 +8,12 @@ import Stories from '../../components/Stories';
 const post = {
   user: {
     imageUri: 'https://robohash.org/mail@ashallendesign.co.uk',
-    name: 'Sushil',
+    name: 'Jason',
   },
   imageUri: 'https://placekitten.com/250/250',
+  caption: 'Beautiful Cats #instagram',
+  likesCount: 1234,
+  postedAt: '6 minutes ago',
 };
 
 const HomeScreen = () => {
