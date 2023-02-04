@@ -4,7 +4,9 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Feather from 'react-native-vector-icons/Feather';
 import IoniconsIcon from 'react-native-vector-icons/Ionicons';
 import logo from '../assets/images/logo.png';
+
 import HomeScreen from '../screens/HomeScreen';
+import StoryScreen from '../screens/StoryScreen';
 
 const HomeStack = createNativeStackNavigator();
 
@@ -34,6 +36,11 @@ const HomeRoutes = () => {
             />
           ),
         }}
+      />
+      <HomeStack.Screen
+        name="Story"
+        component={StoryScreen}
+        options={{headerShown: false}}
       />
     </HomeStack.Navigator>
   );
