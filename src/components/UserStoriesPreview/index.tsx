@@ -1,56 +1,19 @@
 import React from 'react';
 import {FlatList} from 'react-native';
 import Story from '../UserStoryPreview';
-import styles from './styles';
+import storiesData from '../../data/stories';
 
-const data = [
-  {
-    imageUri: 'https://placekitten.com/250/250',
-    name: 'Maria',
-  },
-  {
-    imageUri:
-      'https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250',
-    name: 'Kevin',
-  },
-  {
-    imageUri: 'https://robohash.org/mail@ashallendesign.co.uk',
-    name: 'Roboto',
-  },
-  {
-    imageUri: 'https://placebear.com/250/250',
-    name: 'Gyrills',
-  },
-  {
-    imageUri: 'https://placekitten.com/250/250',
-    name: 'Antony',
-  },
-  {
-    imageUri:
-      'https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250',
-    name: 'Rohan',
-  },
-  {
-    imageUri: 'https://robohash.org/mail@ashallendesign.co.uk',
-    name: 'Sushil',
-  },
-  {
-    imageUri: 'https://placebear.com/250/250',
-    name: 'Shubham',
-  },
-];
+import styles from './styles';
 
 const Stories = () => {
   return (
     <FlatList
-      data={data}
+      data={storiesData}
       keyExtractor={({name}) => name}
       horizontal
       showsHorizontalScrollIndicator={false}
       style={styles.container}
-      renderItem={({item}) => (
-        <Story imageUri={item.imageUri} name={item.name} />
-      )}
+      renderItem={({item}) => <Story story={item} />}
     />
   );
 };
