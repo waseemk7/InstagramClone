@@ -6,7 +6,7 @@ import Foundation from 'react-native-vector-icons/Foundation';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import IoniconsIcon from 'react-native-vector-icons/Ionicons';
 
-import HomeStackScreen from './home.route';
+import HomeStackScreen from './home.routes';
 import DiscoveryScreen from '../screens/DiscoveryScreen';
 import CreatePostScreen from '../screens/CreatePostScreen';
 import NotificationScreen from '../screens/NotificationScreen';
